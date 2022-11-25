@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(198, 208, 211, 0.922);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    height: 400px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+
+.display {
+    border-radius: 50px;
+    font-size: 60px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline;
+    width: 60px;
+    height: 34px;
+    margin-left: 70px;
+}
+
+
+.switch input {
+    opacity: 0;
+    width:  0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(91, 104, 150);
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: aliceblue;
+    transition: 0.4s;
+
+}
+
+input:checked + .slider {
+    background-color: rgb(221, 92, 92);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=range] {
+    height: 30px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.cold {
+    background-color: rgb(95, 161, 201);
+}
+
+.hot {
+    background-color: rgb(242, 153, 101);
+}
